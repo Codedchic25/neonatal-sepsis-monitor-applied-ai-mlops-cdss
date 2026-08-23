@@ -28,7 +28,8 @@ _cursor.execute(
         oxygen_saturation INTEGER,
         blood_pressure TEXT,
         crp REAL,
-        pct REAL
+        pct REAL,
+        renal_status TEXT
     );
 """
 )
