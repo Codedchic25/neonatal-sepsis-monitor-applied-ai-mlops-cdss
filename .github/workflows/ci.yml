@@ -47,11 +47,6 @@ jobs:
       - name: Run Ruff Static Code Analysis
         run: uv run ruff check . --output-format=github
 
-      - name: Initialize Relational Database Schema
-        run: |
-          uv run alembic upgrade head
-          touch sepsis_neonatal.db
-
       - name: Run Pytest Test Suite
         run: uv run pytest -v
 
