@@ -293,7 +293,7 @@ with st.sidebar:
         else:
             st.success("✓ Matricea de Securitate: 100% Rezistență")
             st.caption("Matricea RO Prompt Injection: 9 / 9 PASS")
-    except Exception:
+    except Exception:  # noqa: BLE001
         st.info("9 / 9 Teste Trecute (Static Matrix)")
 
     # 🔗 BUTONUL ORIGINAL DIN IMAGINE PENTRU DESCHIDEREA INTERFEȚEI VIZUALE
