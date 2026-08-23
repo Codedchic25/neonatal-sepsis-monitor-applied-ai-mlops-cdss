@@ -47,6 +47,9 @@ jobs:
       - name: Run Ruff Static Code Analysis
         run: uv run ruff check . --output-format=github
 
+      - name: Initialize Relational Database Schema (Alembic Migrations)
+        run: uv run alembic upgrade head
+
       - name: Run Pytest Test Suite
         run: uv run pytest -v
 
