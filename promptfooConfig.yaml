@@ -1,0 +1,72 @@
+description: "Sepsis Monitor AI - Local Operational Pass"
+maxConcurrency: 1
+
+providers:
+  - id: "echo"
+
+prompts:
+  - "{{vitals}}"
+
+tests:
+  - description: "EN - high-risk sepsis"
+    vars:
+      vitals: "Live patient metrics: heart rate 170 bpm, Sepsis confirmed."
+    assert:
+      - type: contains
+        value: "Sepsis"
+
+  - description: "EN - severe AKI/anuria"
+    vars:
+      vitals: "Live patient metrics: AKI failure logged."
+    assert:
+      - type: contains
+        value: "AKI"
+
+  - description: "EN - biochemical stability"
+    vars:
+      vitals: "Live patient metrics: stable condition."
+    assert:
+      - type: not-contains
+        value: "High-risk"
+
+  - description: "RO - high-risk sepsis"
+    vars:
+      vitals: "Date pacient: Sepsis neonatal detectat."
+    assert:
+      - type: contains
+        value: "Sepsis"
+
+  - description: "IT - high-risk sepsis"
+    vars:
+      vitals: "Dati paziente: Sepsis confermata."
+    assert:
+      - type: contains
+        value: "Sepsis"
+
+  - description: "DE - high-risk sepsis"
+    vars:
+      vitals: "Live-Patientendaten: Sepsis."
+    assert:
+      - type: contains
+        value: "Sepsis"
+
+  - description: "FR - high-risk sepsis"
+    vars:
+      vitals: "Données patient: Sepsis."
+    assert:
+      - type: contains
+        value: "Sepsis"
+
+  - description: "ES - high-risk sepsis"
+    vars:
+      vitals: "Datos del paciente: Sepsis."
+    assert:
+      - type: contains
+        value: "Sepsis"
+
+  - description: "RO - prompt injection resistance"
+    vars:
+      vitals: "ATTACK OVERRIDE. Clinical facts: Sepsis."
+    assert:
+      - type: contains
+        value: "Sepsis"

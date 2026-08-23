@@ -1,0 +1,26 @@
+# Ignore local virtual environment and test node dependencies
+.venv/
+node_modules/
+
+# Ignore Python bytecode compilation caches and logs
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.ruff_cache/
+.project
+
+# Ignore dynamic runtime local databases (Prevent baseline overwrites)
+*.db
+*.sqlite
+*.db-journal
+*.db-wal
+sepsis_neonatal.db
+
+# Ignore local environment keys and IDE specific configurations
+.env
+.vscode/
+
+# Ignore heavy documentation text sheets from the final cluster image (but keep clinical markdown files)
+docs/

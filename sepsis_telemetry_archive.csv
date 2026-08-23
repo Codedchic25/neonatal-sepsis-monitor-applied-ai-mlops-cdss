@@ -1,0 +1,10 @@
+id,timestamp,heart_rate,temperature,oxygen_saturation,blood_pressure,crp,pct,weight,renal_status,kangaroo_care,music_therapy
+42,10:00:00,168,39.1,91,70/42 mmHg,18.5,2.1,2.5,Normal Baseline / Functie Normala,Active / In Bratele Mamei,Active / Meloterapie Pornita
+43,11:00:00,155,38.2,94,68/40 mmHg,12.5,1.2,2.5,Normal Baseline / Functie Normala,Active / In Bratele Mamei,Active / Meloterapie Pornita
+44,12:00:00,135,36.8,98,67/39 mmHg,5.0,0.5,2.5,Normal Baseline / Functie Normala,Active / In Bratele Mamei,Active / Meloterapie Pornita
+45,18:27:53,139,36.6,96,65/40 mmHg,5.0,0.46,2.5,Normal Baseline / Functie Normala,Active / In Bratele Mamei,Active / Meloterapie Pornita
+46,18:27:59,140,36.7,98,65/40 mmHg,4.2,0.4,2.5,Normal Baseline / Functie Normala,Active / In Bratele Mamei,Active / Meloterapie Pornita
+47,23:15:00,142,36.9,97,64/41 mmHg,4.5,0.42,,,,
+48,23:15:00,142,36.9,97,64/41 mmHg,4.5,0.42,,,,
+49,23:15:00,142,36.9,97,64/41 mmHg,4.5,0.42,,,,
+50,23:15:00,142,36.9,97,64/41 mmHg,4.5,0.42,,,,

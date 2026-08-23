@@ -1,0 +1,48 @@
+# ==============================================================================
+# Sepsis Monitor AI - Security Hardened (Zero-Leak)
+# ==============================================================================
+
+# Database & Storage (Clinical Data Leak Prevention)
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+
+*.log
+assets/storage/
+
+# Environment & Credentials
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Python Environment & Dependencies
+.venv/
+venv/
+ENV/
+env/
+python/
+.pytest_cache/
+.ruff_cache/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# IDEs & System Files
+.vscode/
+!.vscode/settings.json
+.idea/
+.DS_Store
+Thumbs.db

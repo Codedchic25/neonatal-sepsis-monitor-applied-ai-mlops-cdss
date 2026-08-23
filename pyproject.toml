@@ -1,0 +1,49 @@
+[project]
+name = "sepsis-monitor-ai"
+version = "2.0.0"
+description = "Enterprise-Grade Real-Time Neonatal Telemetry & CDSS Support Layer Platform"
+readme = "README.md"
+requires-python = "==3.12.*"
+dependencies = [
+    "streamlit[pdf]>=1.35.0",
+    "pandas>=2.2.0",
+    "sqlalchemy>=2.0.0",
+    "python-dotenv>=1.0.1",
+    "requests>=2.31.0",
+    "reportlab>=5.0.0",
+    "alembic>=1.19.0",
+    "groq>=1.6.0",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # Pyflakes
+    "I",   # isort
+    "BLE"  # Blind exception catches validator
+]
+ignore = []
+
+[tool.ruff.lint.isort]
+known-first-party = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+pythonpath = ["."]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::PendingDeprecationWarning"
+]
+
+[dependency-groups]
+dev = [
+    "promptfoo>=0.1.4",
+    "pytest>=9.1.1",
+    "ruff>=0.16.1",
+]

@@ -1,0 +1,6 @@
+[lint]
+# Code style and syntax lines that Ruff should ignore during static analysis audits
+ignore = [
+    "E501",  # Line too long: Allows deep clinical system prompts and dense medical strings to stay unbroken.
+    "E402",  # Module level import not at top of file: Allows safe dynamic environment initialization before imports.
+]
